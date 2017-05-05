@@ -1,2 +1,4 @@
 # Kawkasos
-Artificial Intelligence
+ Artificial Intelligence
+
+* FAI 1 - [Practical Deep Learning I](http://course.fast.ai/)
