@@ -4,8 +4,8 @@ FAI/neural-networks-and-deep-learning/
 FAI/sgd-intro.ipynb
 FAI/lesson1/data/
 FAI/lesson2/data/
-FAI/lesson2/L2HW_data/*             ## looks like dir/ and dir/* both work?
+FAI/lesson2/L2HW_data/
 
-*.ipynb_checkpoints/*
+*/.ipynb_checkpoints/*
 
 *.pyc
