@@ -3,7 +3,9 @@ Kaukasos/FAI/courses/
 Kaukasos/FAI/neural-networks-and-deep-learning/
 Kaukasos/FAI/sgd-intro.ipynb
 Kaukasos/FAI/lesson1/data/
-Kaukasos/FAI/lesson2/data/
-Kaukasos/FAI/lesson2/L2HW_data/*
+FAI/lesson2/data/
+FAI/lesson2/L2HW_data/*
 
-*.ipynb_checkpoints
+*.ipynb_checkpoints/*
+
+*.pyc
