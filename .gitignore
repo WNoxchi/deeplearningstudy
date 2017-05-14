@@ -6,12 +6,10 @@ FAI/lesson1/data/
 FAI/lesson2/data/
 FAI/lesson2/L2HW_data/
 
-
 ## don't know how to get rid of all JNB chkpt subdirs yet:
-*/*/.ipynb_checkpoints/
+## looks like this works:
 
-#FAI/lesson1/.ipynb_checkpoints/
-#FAI/lesson2/.ipynb_checkpoints/
-#FAI/lesson3/.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+*/*/.ipynb_checkpoints/
 
 *.pyc
