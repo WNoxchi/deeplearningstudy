@@ -6,6 +6,6 @@ FAI/lesson1/data/
 FAI/lesson2/data/
 FAI/lesson2/L2HW_data/
 
-*/.ipynb_checkpoints/*
+*/.ipynb_checkpoints/
 
 *.pyc
