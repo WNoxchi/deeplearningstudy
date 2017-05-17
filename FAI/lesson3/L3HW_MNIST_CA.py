@@ -11,11 +11,13 @@ import keras
 import numpy as np
 
 from keras.datasets import mnist
-from keras.utils import to_categorical
+from keras.utils.np_utils import to_categorical
 from keras.models import Sequential
 from keras.preprocessing import image
 from keras.layers.normalization import BatchNormalization
 from keras.layers.core import Dropout
+from keras.layers.core import Lambda
+from keras.layers.core import Dense
 
 # load data
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
@@ -170,7 +172,7 @@ FC_model.fit_generator(trn_batches, trn_batches.n, nb_epoch=4,
 def get_model():
     model = Sequential([
         Lambda(norm_input, input_shape=(1, 28, 28)),
-        Flatten(),
+        # Flatten(),
         # VGG typically has a couple CNN layers of 3x3
         Convolution2D(32, 3, 3, activation='relu'),
         Convolution2D(32, 3, 3, activation='relu'),
@@ -365,7 +367,6 @@ def get_model_bn_do():
         Convolution2D(64, 3, 3, activation='relu'),
         MaxPooling2D(),
         Flatten(),
-        MaxPooling2D(),
         BatchNormalization(),
         Dense(512, activation='relu'),
         BatchNormalization(),
@@ -415,7 +416,7 @@ path = "data/mnist/"
 model_path = path + 'models/'
 for i,m in enumerate(models):
     # I think you'll need utils.py for this:
-    m.save_weights(model_path + 'cnn-mnist-' + str(i) + 'pkl')
+    m.save_weights(model_path + 'cnn-mnist-' + str(i) + '.pkl')
 
 # I think JH did this to see what the outputs were:
 # evals = np.array([m.evaluate(x_test, y_test, batch_size=256) for m in models)
