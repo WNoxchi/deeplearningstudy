@@ -5,6 +5,7 @@ FAI/sgd-intro.ipynb
 FAI/lesson1/data/
 FAI/lesson2/data/
 FAI/lesson2/L2HW_data/
+FAI/FAInbs/
 
 ## don't know how to get rid of all JNB chkpt subdirs yet:
 ## looks like this works:
