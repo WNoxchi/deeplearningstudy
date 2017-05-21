@@ -5,6 +5,11 @@
 # StateFarm Distracted Driver Kaggle Competition
 # Wayne Nixalo - 2017-May-20 00:48
 
+# NOTE: for reference:
+#       On Keras predict_generator: https://keras.io/models/sequential/#predict_generator
+#       Example successful JNB & using Pandas to write a submission:
+#       https://github.com/philippbayer/cats_dogs_redux/blob/master/Statefarm.ipynb
+
 # Imports
 import keras
 import os, sys
