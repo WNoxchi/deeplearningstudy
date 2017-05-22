@@ -14,6 +14,7 @@
 import keras
 import os, sys
 import numpy as np
+import Pandas as pd
 from glob import glob
 from keras.optimizers import Adam
 from keras.layers.core import Dense
@@ -59,6 +60,32 @@ TEST_DIR    = DATA_DIR + '/test'
 #     for n in xrange(int(number * VAL_PORTION)):
 #         os.rename(shuff[n], VAL_DIR + '/c' + str(i) + '/' + shuff[n])
 #     % cd ..
+
+# modified:
+def reset_valid():
+    """Moves all images in validation set back to
+    their respective classes in the training set."""
+    for i in xrange(10):
+        %mv $VALID_DIR/c"$i"/*.jpg $TRAIN_DIR/c"$i"/*.jpg
+
+# modified from: http://forums.fast.ai/t/statefarm-kaggle-comp/183/20
+def set_valid(number=1):
+    if number < 0: number = 0
+    for n in xrange(number):
+        # read CSV file into Pandas DataFrame
+        dil = pd.read_csv(path + 'driver_imgs_list.csv')
+        # group frame by subject in image
+        grouped_subjects = dil.groupby('subject')
+        # pick <number> subjects at random
+        subject = groups.keys()[np.random.randint(0, high=len(groups))]
+        # get the group assoc w/ subject
+        group = grouped.get_group(subject)
+        # loop over group & move imgs to validation dir
+        for (subject, clssnm, img) in group.values:
+            source = '{}train/{}/{}'.format(data_path, clssnm, img)
+            target = source.replace('train', 'valid')
+            print('mv {} {}'.format(source, target))
+            os.rename(source, target)
 
 # some more setup
 data_path    = DATA_DIR  + '/'
