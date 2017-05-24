@@ -1,6 +1,6 @@
 # New 'clean-pass' of L3HW-SF ~ usin' lessons learned
 # Wayne Nixalo - 2017-May-23 02:37
-
+#
 # useful links:
 # DataAugmentation:
 # https://github.com/fastai/courses/blob/master/deeplearning1/nbs/lesson3.ipynb
@@ -102,7 +102,7 @@ def create_FCbn_layers(p=0):
 # # creating validation directories
 # os.mkdir(VAL_DIR)
 # for i in xrange(10):
-#     os.mkdir(VAL_DIR + '/c' + str(i)
+#     os.mkdir(VAL_DIR + '/c' + str(i))
 #
 # # another way to do this:
 # %mkdir $VAL_PATH
@@ -249,7 +249,7 @@ def hybrid_ensemble(number=1):
         preds = FC_model.predict(conv_tst_feat, batch_size=batch_size*2)
         predarray.append(preds)
 
-    
+
 
     # NOTE: I could probably save more memory by loading a tabula-rasa FCNet
     #       from disk, instead of just defining a new one each iteration.
