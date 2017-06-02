@@ -9,7 +9,7 @@ FAI/lesson3/mnist_data/
 FAI/FAInbs/
 neural-networks-and-deep-learning/
 FAI/*/data/
-
+FAI/data/
 
 ## don't know how to get rid of all JNB chkpt subdirs yet:
 ## looks like this works:
