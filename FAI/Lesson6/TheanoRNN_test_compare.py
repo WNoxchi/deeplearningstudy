@@ -6,19 +6,19 @@
 # a loss of ~25 and ends at ~14.4, and reasonably predict the next character.
 # Done wrong, the model starts with a loss ~30~29, and ends at ~25, and
 # predicts only empty spaces (obvious easy local minima).
-
+#
 # I've narrowed down the relevant parts of code, going on a goose-hunt pursuing
 # red herrings, until finally discovering the model works as advertised when
 # copied, but not when I rewrite it. So this is to see where I made errors and
 # how they're responsible.
-
+#
 # NOTE: ohhh my holy fuck. The culprit was the:
 #           from __future__ import division, print_function
 # line. Specifically `import division`. That single import is responsible for
 # the last 2 weeks of tracking down this issue. So why? Well w/o looking into
 # it, it seems like somewhere integer division was supposed to be done where
 # floating-point div was instead done or vice-versa.
-
+#
 # NOTE: okay got it. importing division from __future__ gives you Python3
 # divison: floating-point. My poor RNN's SGD optimizer was forced to use
 # integer division everywhere instead of floating-point. Oof. Well, that's done.
