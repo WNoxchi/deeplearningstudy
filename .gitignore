@@ -11,6 +11,9 @@ neural-networks-and-deep-learning/
 FAI/*/data/
 FAI/data/
 .ipynb_checkpoints/
+rnn-tutorial-lstm/
+*.zip
+*.7z
 
 ## don't know how to get rid of all JNB chkpt subdirs yet:
 ## looks like this works:
