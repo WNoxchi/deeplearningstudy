@@ -241,7 +241,7 @@ def get_conv_feat(fname, conv_model, batches, batch_size, inc=4096):
     system memory limits by running `model.predict` on data in batches.
     """
     # NOTE: could I just use predict_generator on gen.flow_from_directory ?
-    idx, inc = 0, 4096
+    idx = 0
     preds = []
 
     conv_feat = bcolz.open(fname)[:idx]
