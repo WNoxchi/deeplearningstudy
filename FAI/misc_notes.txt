@@ -1,0 +1,6 @@
+2017-Jul-04 00:23
+
+https://stackoverflow.com/questions/15216370/how-to-count-number-of-files-in-each-directory
+This prints the file count per directory for the current directory level:
+
+du -a | cut -d/ -f2 | sort | uniq -c | sort -nr
