@@ -234,29 +234,30 @@ def split_at(model, layer_type):
     return layers[:layer_idx+1], layers[layer_idx+1:]
 
 
-# WNX - 2017-Jul-05 16:53
-def get_conv_feat(fname, conv_model, batches, batch_size, inc=4096):
-    """
-    Function generates an array of convolutional features, independent of
-    system memory limits by running `model.predict` on data in batches.
-    """
-    # NOTE: could I just use predict_generator on gen.flow_from_directory ?
-    idx, inc = 0, 4096
-    preds = []
-
-    conv_feat = bcolz.open(fname)[:idx]
-    preds = conv_model.predict(conv_feat, batch_size=batch_size, verbose=0)
-
-    while idx < batches.n - inc:
-        conv_feat = bcolz.open(fname)[idx:idx+inc]
-        idx += inc
-        next_preds = conv_model.predict(conv_feat, batch_size=batch_size, verbose=0)
-
-    conv_feat = bcolz.open(fname)[idx:]
-    next_preds = conv_model.predict(conv_feat, batch_size=batch_size, verbose=0)
-    preds = np.concatenate([preds, next_preds])
-
-    return preds
+# NOTE: commented out until later
+# # WNX - 2017-Jul-05 16:53
+# def get_conv_feat(fname, conv_model, batches, batch_size, inc=4096):
+#     """
+#     Function generates an array of convolutional features, independent of
+#     system memory limits by running `model.predict` on data in batches.
+#     """
+#     # NOTE: could I just use predict_generator on gen.flow_from_directory ?
+#     idx = 0
+#     preds = []
+#
+#     conv_feat = bcolz.open(fname)[:idx]
+#     preds = conv_model.predict(conv_feat, batch_size=batch_size, verbose=0)
+#
+#     while idx < batches.n - inc:
+#         conv_feat = bcolz.open(fname)[idx:idx+inc]
+#         idx += inc
+#         next_preds = conv_model.predict(conv_feat, batch_size=batch_size, verbose=0)
+#
+#     conv_feat = bcolz.open(fname)[idx:]
+#     next_preds = conv_model.predict(conv_feat, batch_size=batch_size, verbose=0)
+#     preds = np.concatenate([preds, next_preds])
+#
+#     return preds
 
 
 class MixIterator(object):
