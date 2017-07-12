@@ -1,3 +1,14 @@
+2017-Jul-12 02:59
+Fastest way to extract frames using ffmpeg?
+https://stackoverflow.com/questions/10957412/fastest-way-to-extract-frames-using-ffmpeg
+
+ffmpeg -i file.mpg -r 1/1 $filename%03d.bmp
+
+NOTE: "This also has the advantage of not incurring more quality loss through
+quantization by transcoding to JPEG. (PNG is also lossless but tends to take
+much longer than JPEG to encode.)"
+
+
 2017-Jul-04 00:23
 
 https://stackoverflow.com/questions/15216370/how-to-count-number-of-files-in-each-directory
