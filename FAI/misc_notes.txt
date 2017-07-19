@@ -4,3 +4,10 @@ https://stackoverflow.com/questions/15216370/how-to-count-number-of-files-in-eac
 This prints the file count per directory for the current directory level:
 
 du -a | cut -d/ -f2 | sort | uniq -c | sort -nr
+
+https://askubuntu.com/questions/463486/can-no-longer-use-screen-share-to-connect-mac-to-ubuntu-since-upgrading-to-14-04
+enabling remote desktop access MacOS -> Ubuntu Linux:
+gsettings set org.gnome.Vino require-encryption false^
+
+maybe also useful:
+https://askubuntu.com/questions/419399/log-into-ubuntu-from-my-mac-over-vnc
