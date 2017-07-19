@@ -22,3 +22,6 @@ gsettings set org.gnome.Vino require-encryption false^
 
 maybe also useful:
 https://askubuntu.com/questions/419399/log-into-ubuntu-from-my-mac-over-vnc
+
+quick way to get local ipaddress:
+ifconfig|grep "inet "|grep -v 127.0.0.1
