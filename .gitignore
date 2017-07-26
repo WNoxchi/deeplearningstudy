@@ -19,6 +19,9 @@ rnn-tutorial-lstm/
 *.tar.gz
 *.pptx
 .pickle
+.pkl
+.png
+.jpg
 ## don't know how to get rid of all JNB chkpt subdirs yet:
 ## looks like this works:
 
