@@ -31,7 +31,7 @@ rnn-tutorial-lstm/
 *.pyc
 
 FACLA/numerical-linear-algebra/
-FAI02/neural-trsf/photos/
+FAI02/neural-trsf-photos/
 FAI02/dict.pickle
 FAI02/pickle-blah.pkl
 FAI02/data/
