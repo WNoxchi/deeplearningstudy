@@ -29,3 +29,8 @@ rnn-tutorial-lstm/
 */*/.ipynb_checkpoints/
 
 *.pyc
+
+FACLA/numerical-linear-algebra/
+FAI02/neural-trsf/photos/
+FAI02/dict.pickle
+FAI02/pickle-blah.pkl
