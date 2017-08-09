@@ -16,7 +16,10 @@ from tensorflow.python.framework import ops
 from tensorflow.contrib import rnn, legacy_seq2seq as seq2seq
 
 from keras_tqdm import TQDMNotebookCallback
-from keras import initializations
+try:    # Keras 1. -> Keras 2.
+    from keras import initializations
+except ImportError:
+    from keras import initializers
 from keras.applications.resnet50 import ResNet50, decode_predictions, conv_block, identity_block
 from keras.applications.vgg16 import VGG16
 from keras.preprocessing import image
@@ -106,4 +109,3 @@ def fit_gen(gen, fn, eval_fn, nb_iter):
     for i in range(nb_iter):
         fn(*next(gen))
         if i % (nb_iter//10) == 0: eval_fn()
-
