@@ -39,3 +39,5 @@ FAI02/data/
 temp.py
 ssh_steps.txt
 temp.*
+
+data/*
