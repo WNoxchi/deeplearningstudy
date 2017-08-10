@@ -16,10 +16,10 @@ from tensorflow.python.framework import ops
 from tensorflow.contrib import rnn, legacy_seq2seq as seq2seq
 
 from keras_tqdm import TQDMNotebookCallback
-try:    # Keras 1. -> Keras 2.
-    from keras import initializations
-except ImportError:
-    from keras import initializers
+# try:    # Keras 1. -> Keras 2.
+from keras import initializations
+# except ImportError:
+#     from keras import initializers
 from keras.applications.resnet50 import ResNet50, decode_predictions, conv_block, identity_block
 from keras.applications.vgg16 import VGG16
 from keras.preprocessing import image
