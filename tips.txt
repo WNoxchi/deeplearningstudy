@@ -1,0 +1,7 @@
+# https://stackoverflow.com/questions/651018/opening-a-tar-gz-file-with-a-single-command
+
+tar xzf file.tar.gz
+
+    x - extract
+    z - gunzip the input
+    f - Read from a file, not stdin
