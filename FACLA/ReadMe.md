@@ -1,1 +1,1 @@
-# Course Folder for FACLA Computational Linear Algebra
+# Course Folder for FACLA: Numerical/Computational Linear Algebra
