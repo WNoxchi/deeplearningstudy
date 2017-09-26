@@ -5,3 +5,14 @@ tar xzf file.tar.gz
     x - extract
     z - gunzip the input
     f - Read from a file, not stdin
+
+# remote-sync
+rsync -r ~/Desktop/style-test/ wnixalo@WNX-G750JS:~/Kaukasos/FAI02/data/lesson9/style-test/
+
+# JupyterNotebook SSH
+(host):     jupyter notebook --no-browser --port=8889
+(client):   ssh -NL 8889:localhost:8889 wnixalo@WNX-G750JS
+
+# On ssh broken-pipes (client/server intervals):
+https://unix.stackexchange.com/questions/2010/what-does-the-broken-pipe-message-mean-in-an-ssh-session
+https://coderwall.com/p/8ag5aq/ssh-broken-pipe-fix-mac-os-x
