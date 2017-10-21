@@ -40,5 +40,15 @@ temp.py
 ssh_steps.txt
 temp.*
 
+FAI02_old/courses/
+FAI02_old/data/
+FAI02_old/dict.pickle
+FAI02_old/pickle-blah.pkl
+FAI_old/courses/
+FAI_old/data/
+FAI_old/lesson1/data/
+FAI_old/lesson2/L2HW_data/
+FAI_old/lesson2/data/
+
 Kaggle/Planet/data/*
 FastAi
