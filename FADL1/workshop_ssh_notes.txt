@@ -1,0 +1,21 @@
+2017-Oct-21 16:48 -- ~[1:59:00]; https://www.youtube.com/watch?v=kjjw4VkVgy8
+Reference: https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
+
+>>> ssh-keygen -t rsa
+* copy keys to directory .ssh
+* copy your public key
+>>> cat ~/.ssh/id_rsa.pub | ssh paperspace@IPADDRESS "mkdir -p ~/.ssh && cat
+>>> ~/.ssh/authorized_keys"
+
+NOTE:
+brew install ssh-copy-id USER@IPADDRESS
+
+Questions:
+Do I need public IP address to ssh?
+
+3blue1brown@amplifypartners.com
+
+f2t-xgE-R6v-XqQ
+432495155507 - WNoxchi
+432495155507
+ old number +995 595 08 95 91
