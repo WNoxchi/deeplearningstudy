@@ -61,6 +61,12 @@ print(a); print(b)
 # CUDA Tensors:
 # Tensors can be moved onto GPU using the .cuda function
 # -- let us run this cell only if CUDA is available
+if torch.cuda.is_available():
+    x = x.cuda()
+    y = y.cuda()
+    x + y
+
+print("End of script")
 
 
 
