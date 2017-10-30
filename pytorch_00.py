@@ -65,6 +65,9 @@ if torch.cuda.is_available():
     x = x.cuda()
     y = y.cuda()
     x + y
+    print("CUDA available: GPU used")
+    print(x); print(y)
+    print(x+y)
 
 print("End of script")
 
