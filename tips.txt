@@ -16,3 +16,6 @@ rsync -r ~/Desktop/style-test/ wnixalo@WNX-G750JS:~/Kaukasos/FAI02/data/lesson9/
 # On ssh broken-pipes (client/server intervals):
 https://unix.stackexchange.com/questions/2010/what-does-the-broken-pipe-message-mean-in-an-ssh-session
 https://coderwall.com/p/8ag5aq/ssh-broken-pipe-fix-mac-os-x
+
+# git credential store:
+https://git-scm.com/docs/git-credential-store
