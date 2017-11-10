@@ -19,3 +19,13 @@ https://coderwall.com/p/8ag5aq/ssh-broken-pipe-fix-mac-os-x
 
 # git credential store:
 https://git-scm.com/docs/git-credential-store
+
+# add ipykernel:
+http://ipython.readthedocs.io/en/stable/install/kernel_install.html
+source activate other-env
+python -m ipykernel install --user --name other-env --display-name "Python (other-env)"
+
+# remove ipykernel:
+https://stackoverflow.com/questions/42635310/remove-kernel-on-jupyter-notebook
+jupyter kernelspec list
+
