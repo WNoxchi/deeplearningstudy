@@ -8,6 +8,7 @@ tar xzf file.tar.gz
 
 # remote-sync
 rsync -r ~/Desktop/style-test/ wnixalo@WNX-G750JS:~/Kaukasos/FAI02/data/lesson9/style-test/
+rsync -r ~/FROM_HERE/ wnixalo@WNX-G750JS:~/TO_HERE/
 
 # JupyterNotebook SSH
 (host):     jupyter notebook --no-browser --port=8889
@@ -28,4 +29,3 @@ python -m ipykernel install --user --name other-env --display-name "Python (othe
 # remove ipykernel:
 https://stackoverflow.com/questions/42635310/remove-kernel-on-jupyter-notebook
 jupyter kernelspec list
-
