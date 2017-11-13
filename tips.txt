@@ -29,3 +29,6 @@ python -m ipykernel install --user --name other-env --display-name "Python (othe
 # remove ipykernel:
 https://stackoverflow.com/questions/42635310/remove-kernel-on-jupyter-notebook
 jupyter kernelspec list
+
+# bash shell script:
+https://askubuntu.com/questions/223691/how-do-i-create-a-script-file-for-terminal-commands/223698
