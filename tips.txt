@@ -32,3 +32,4 @@ jupyter kernelspec list
 
 # bash shell script:
 https://askubuntu.com/questions/223691/how-do-i-create-a-script-file-for-terminal-commands/223698
+https://stackoverflow.com/questions/22656359/bash-shell-script-opening-multiple-terminals-and-executing-distinct-commands
