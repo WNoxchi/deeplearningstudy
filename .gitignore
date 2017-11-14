@@ -1,5 +1,6 @@
 .ssh
 data/
+fastai_old/
 FADL1/fastai/*
 # Kaukasos/FAI/utils/
 FAI/courses/
