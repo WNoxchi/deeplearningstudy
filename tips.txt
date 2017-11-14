@@ -17,6 +17,7 @@ rsync -r ~/FROM_HERE/ wnixalo@WNX-G750JS:~/TO_HERE/
 # On ssh broken-pipes (client/server intervals):
 https://unix.stackexchange.com/questions/2010/what-does-the-broken-pipe-message-mean-in-an-ssh-session
 https://coderwall.com/p/8ag5aq/ssh-broken-pipe-fix-mac-os-x
+https://askubuntu.com/questions/127369/how-to-prevent-write-failed-broken-pipe-on-ssh-connection
 
 # git credential store:
 https://git-scm.com/docs/git-credential-store
