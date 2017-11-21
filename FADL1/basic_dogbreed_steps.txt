@@ -1,0 +1,28 @@
+# Initialization
+Arch = ResNeXt101_64
+get_data: sz=224, bs=64
+learner(), precompute=True
+
+# Initial Training
+learn.fit(1e-2, 5)
+
+# Augmentation
+learner(), precompute=True, ps=0.5 # dropout
+learn.fit(1e-2, 2)
+    ## LR finder
+learn.find_lr()
+learn.sched.plot()
+precompute = False
+learn.fit(1e-2, 5, cycle_len=1)
+
+# save
+
+# Increase Size
+learn.set_data get_data: sz=299, bs=32
+learn.fit(1e-2, 3, cycle_len=1)
+learn.fit(1e-2, 3, cycle_len=1, cycle_mult=2) # cycle_mult takes advtg of SGDR
+
+# save
+
+# Finish Training & Test/Submit
+learn.fit(1e-2, 1, cycle_len=2)

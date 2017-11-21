@@ -2,6 +2,7 @@
 data/
 fastai_old/
 FADL1/fastai/*
+tmp/
 # Kaukasos/FAI/utils/
 FAI/courses/
 FAI/neural-networks-and-deep-learning/
