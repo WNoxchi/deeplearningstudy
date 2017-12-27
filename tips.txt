@@ -37,3 +37,12 @@ https://stackoverflow.com/questions/22656359/bash-shell-script-opening-multiple-
 
 # Linux/UNIX: check drive usage via terminal:
 https://askubuntu.com/questions/432836/how-can-i-check-disk-space-used-in-a-partition-using-the-terminal-in-ubuntu-12-0/432842
+
+# Find where a Python module is imported from:
+https://stackoverflow.com/questions/7150998/where-is-module-being-imported-from
+>>> import my_module
+>>> my_module.__file__
+
+# Install a local package w/ a Makefile directly to Conda Env (after $ make):
+https://docs.python.org/2/install/index.html#alternate-installation-unix-the-prefix-scheme
+python setup.py install --prefix=<conda env path>
