@@ -46,3 +46,8 @@ https://stackoverflow.com/questions/7150998/where-is-module-being-imported-from
 # Install a local package w/ a Makefile directly to Conda Env (after $ make):
 https://docs.python.org/2/install/index.html#alternate-installation-unix-the-prefix-scheme
 python setup.py install --prefix=<conda env path>
+# NOTE: must activate env first
+
+# ImportError: numpy.core.multiarray failed to import:
+https://github.com/pytorch/pytorch/issues/2731
+>>> pip install numpy -I
