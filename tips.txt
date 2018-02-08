@@ -51,3 +51,13 @@ python setup.py install --prefix=<conda env path>
 # ImportError: numpy.core.multiarray failed to import:
 https://github.com/pytorch/pytorch/issues/2731
 >>> pip install numpy -I
+
+# ssh AWS
+$ ssh -i .ssh/ssh-key.pem remoteuser@remoteaddress
+
+# ssh tunnel (Jupyter) AWS
+$ ssh -i .ssh/ssh-key.pem remoteuser@remoteaddress -L portnum:localhost:portnum
+
+# rsync AWS
+http://www.anthonychambers.co.uk/blog/rsync-to-aws-ec2-using-.pem-key/9
+
