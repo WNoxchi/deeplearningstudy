@@ -61,3 +61,5 @@ $ ssh -i .ssh/ssh-key.pem remoteuser@remoteaddress -L portnum:localhost:portnum
 # rsync AWS
 http://www.anthonychambers.co.uk/blog/rsync-to-aws-ec2-using-.pem-key/9
 
+# finding offline documentation for ReadTheDocs:
+http://natanyellin.com/2012/04/22/downloading-pdf-documentation-for-readthedocs-projects/
