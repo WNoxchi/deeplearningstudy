@@ -1,3 +1,6 @@
+*.npy
+*.mp4
+openaicode/
 underactuated/
 PyTorch/hymenoptera_data/*
 jupyterhub-setup.txt
