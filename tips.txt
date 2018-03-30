@@ -15,9 +15,15 @@ rsync -r ~/FROM_HERE/ wnixalo@WNX-G750JS:~/TO_HERE/
 (client):   ssh -NL 8889:localhost:8889 wnixalo@WNX-G750JS
 
 # On ssh broken-pipes (client/server intervals):
-https://unix.stackexchange.com/questions/2010/what-does-the-broken-pipe-message-mean-in-an-ssh-session
-https://coderwall.com/p/8ag5aq/ssh-broken-pipe-fix-mac-os-x
-https://askubuntu.com/questions/127369/how-to-prevent-write-failed-broken-pipe-on-ssh-connection
+- https://unix.stackexchange.com/questions/2010/what-does-the-broken-pipe-message-mean-in-an-ssh-session
+ -https://unix.stackexchange.com/questions/259225/packet-write-wait-broken-pipe-even-leaving-top-running
+- https://coderwall.com/p/8ag5aq/ssh-broken-pipe-fix-mac-os-x
+- https://askubuntu.com/questions/127369/how-to-prevent-write-failed-broken-pipe-on-ssh-connection
+- https://forums.aws.amazon.com/thread.jspa?threadID=228154
+- https://unix.stackexchange.com/questions/3026/what-options-serveraliveinterval-and-clientaliveinterval-in-sshd-config-exac
+- http://forums.fast.ai/t/keep-ssh-connection-alive/2849/14
+- https://thecustomizewindows.com/2017/06/fix-write-failed-broken-pipe-packet_write_wait-connection-port-22-broken-pipe/
+
 
 # git credential store:
 https://git-scm.com/docs/git-credential-store
@@ -54,6 +60,9 @@ https://github.com/pytorch/pytorch/issues/2731
 
 # ssh AWS
 $ ssh -i .ssh/ssh-key.pem remoteuser@remoteaddress
+#
+# Example: ssh -i .ssh/fastai_wnx_3.pem ubuntu@54.187.143.132 -L8888:localhost:8888
+# See: http://forums.fast.ai/t/great-summary-of-how-to-use-aws/7651
 
 # ssh tunnel (Jupyter) AWS
 $ ssh -i .ssh/ssh-key.pem remoteuser@remoteaddress -L portnum:localhost:portnum
