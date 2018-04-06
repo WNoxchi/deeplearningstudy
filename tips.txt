@@ -67,8 +67,35 @@ $ ssh -i .ssh/ssh-key.pem remoteuser@remoteaddress
 # ssh tunnel (Jupyter) AWS
 $ ssh -i .ssh/ssh-key.pem remoteuser@remoteaddress -L portnum:localhost:portnum
 
+## vnc screen sharing - linux remote desktop
+# setup on linux host:
+sudo apt-get install xorg lxde-core tightvncserver firefox lxterminal xfonts-100dpi
+cat >> ~/.vnc/xstartup
+	lxterminal &
+	/usr/bin/lxsession -s LXDE &
+	<ctrl-d>
+# turning on:
+tightvncserver :13 -geometry 1200x900
+#turning off:
+tightvncserver -kill :13
+## vnc screen sharing - connecting from Mac
+#config
+System Preferences -> Sharing: [check] Screen Sharing
+#connect
+(ssh into linux host -- use [-L59XX:localhost:59XX] where XX any 2 numbers (here: 13)
+(open) Screen Sharing
+localhost:5913
+
 # rsync AWS
 http://www.anthonychambers.co.uk/blog/rsync-to-aws-ec2-using-.pem-key/9
 
 # finding offline documentation for ReadTheDocs:
 http://natanyellin.com/2012/04/22/downloading-pdf-documentation-for-readthedocs-projects/
+
+# Atom jump to definition - symbols
+https://stackoverflow.com/a/45402968
+https://atom.io/packages/atom-ide-ui
+cmd-click          : go to definition (anywhere)
+ctrl-cmd-G         : select all instances in file for editing
+option-shift-cmd-F : find references
+cmd-option (hold)  : show args
