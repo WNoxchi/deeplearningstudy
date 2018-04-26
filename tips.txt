@@ -99,3 +99,6 @@ cmd-click          : go to definition (anywhere)
 ctrl-cmd-G         : select all instances in file for editing
 option-shift-cmd-F : find references
 cmd-option (hold)  : show args
+
+# summarize disk size of all items in current directory:
+du -h --max-depth=1
