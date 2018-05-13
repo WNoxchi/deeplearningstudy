@@ -103,3 +103,6 @@ cmd-option (hold)  : show args
 
 # summarize disk size of all items in current directory:
 du -h --max-depth=1
+
+# graphviz error:
+https://stackoverflow.com/questions/35064304/runtimeerror-make-sure-the-graphviz-executables-are-on-your-systems-path-aft
