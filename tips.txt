@@ -98,6 +98,7 @@ https://stackoverflow.com/a/45402968
 https://atom.io/packages/atom-ide-ui
 cmd-click          : go to definition (anywhere)
 ctrl-cmd-G         : select all instances in file for editing
+cmd-click	   : multiple text cursors on click
 option-shift-cmd-F : find references
 cmd-option (hold)  : show args
 
