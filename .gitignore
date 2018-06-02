@@ -10,6 +10,7 @@ PyTorch/hymenoptera_data/*
 jupyterhub-setup.txt
 .ssh
 data/
+data
 fastai_old/
 FADL1/fastai/*
 tmp/
