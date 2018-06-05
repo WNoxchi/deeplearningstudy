@@ -6,7 +6,8 @@ import numpy as np
 import os
 
 def create_cifar_subset(path, fullpath=Path(), copypath='', p=0.1, copydirs=['train','valid','test']):
-    """Copies subset `p` percent of a dataset: dataroot/ -> dataroot_tmp/, uniformly sampled."""
+    """Copies subset `p` percent of a dataset: dataroot/ -> dataroot_tmp/, uniformly sampled.
+       Returns the subset's path."""
     if not copypath:
         copypath = Path(str(path) + '_tmp')
         if os.path.exists(copypath): rmtree(copypath)
@@ -16,9 +17,10 @@ def create_cifar_subset(path, fullpath=Path(), copypath='', p=0.1, copydirs=['tr
     copies = []
     dirs = os.listdir(fullpath)
     for f in dirs:
-        if (fullpath/f).is_dir() and (copydirs==[] or f in copydirs):
-            os.makedirs(copypath/f)
-            create_cifar_subset(f, fullpath, copypath, copydirs=[])
+        if (fullpath/f).is_dir():
+            if (copydirs==[] or f in copydirs):
+                os.makedirs(copypath/f)
+                create_cifar_subset(f, fullpath, copypath, copydirs=[])
         else:
             copies.append(f)
     if copies:
@@ -56,6 +58,7 @@ def generate_csv(path, labelmap=None, folder='train'):
     rows = []
 
     for cat in catfolders:
+        if type(cat)==list: cat=cat[0]
         catpath = path/folder/cat
         fpaths  = list(map(lambda x: cat+'/'+x, os.listdir(catpath)))
         rows.extend(list(zip(fpaths,[labelmap[cat] for i in range(len(fpaths))])))
@@ -144,7 +147,7 @@ def plot_pops(df, print_ms=True):
             yerr=max(df.mean()[0]*0.005, df.std()[0]), alpha=.8)
     df.mean()[0], df.std()[0]
     
-def basic_pop_plot(c_totals=c_totals, sd=sd, pseudomean=None, catlist=None):
+def basic_pop_plot(c_totals=None, sd=None, pseudomean=None, catlist=None):
     sa,mean = c_totals.std(),c_totals.mean() if pseudomean is None else pseudomean
     plt.bar(x=range(len(c_totals)),height=c_totals, alpha=0.4, color='k');
     plt.axhline(y=mean,c='r'); plt.axhline(y=mean+sd,c='k'); plt.axhline(y=mean-sd,c='k');
