@@ -45,6 +45,48 @@ def count_files(path, fullpath=Path(), count=0):
             count += 1
     return count
 
+# MacOS creates a .DS_Store file when files are copied and/or unzipped.
+# This will cause problems if using `.from_paths` to load data.
+def remove_dstore(path, fullpath=Path()):
+    """Removes all '.DS_Store' files in directory recursively."""
+    fullpath /= path
+    dirs = os.listdir(fullpath)
+    for direc in dirs:
+        if direc.lower() == '.ds_store':
+            os.remove(fullpath/direc)
+            continue
+        if (fullpath/direc).is_dir(): remove_dstore(direc, fullpath)
+
+def reset_data(path, trn_name='train', val_name='valid'):
+    """Moves all validation data back to their respective training folders."""
+    remove_dstore(path/trn_name)
+    remove_dstore(path/val_name)
+    
+    cats = os.listdir(path/val_name)
+    for cat in cats:
+        fnames = os.listdir(path/val_name/cat)
+        for fname in fnames:
+            os.rename(path/val_name/cat/fname, path/trn_name/cat/fname)
+        # will remove entire val folder
+        os.removedirs(path/val_name/cat)
+
+def create_valset(path, p=0.15, trn_name='train', val_name='valid'):
+    """Creates a validation set by moving a percentage of the training data 
+       from `trn_name` to `val_name`."""
+    if not os.path.exists(path / val_name):
+        os.makedirs(path / val_name)
+    else:
+        reset_data(path, trn_name=trn_name, val_name=val_name)
+    
+    cats = os.listdir(path/trn_name)
+    for cat in cats:
+        os.makedirs(path/val_name/cat, exist_ok=True)
+        moves = os.listdir(path/trn_name/cat)
+        nmove = int(len(moves)*p)
+        moves = np.random.choice(moves, nmove, replace=False)
+        for move in moves:
+            os.rename(path/trn_name/cat/move, path/val_name/cat/move)
+
 def generate_csv(path, labelmap=None, folder='train'):
     """Infers a csv from directory structure. 
        `labelmap` is a dictionary mapping class folders to class names.
