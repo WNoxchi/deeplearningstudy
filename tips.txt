@@ -107,3 +107,11 @@ du -h --max-depth=1
 
 # graphviz error:
 https://stackoverflow.com/questions/35064304/runtimeerror-make-sure-the-graphviz-executables-are-on-your-systems-path-aft
+
+# resetting git repo fork to original repo:
+# https://stackoverflow.com/a/9646323
+git remote add upstream /url/to/original/repo
+git fetch upstream
+git checkout master
+git reset --hard upstream/master  
+git push origin master --force 
