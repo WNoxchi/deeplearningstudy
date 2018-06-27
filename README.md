@@ -1,5 +1,5 @@
 # Kaukasos
- Artificial Intelligence
+ Artificial Intelligence / Robotics / Quantum Informatics
  
  ---
 
@@ -29,14 +29,10 @@
 
 ## Others
 
-* Kaggle –– kaggle competition code (unused; may make own repository instead)
+* Kaggle –– kaggle competition code *(unused; may make own repository instead)*
 
-* ML –– general machine learning (will delete)
+* ML –– general machine learning *(will delete)*
 
-* TPOT –– folder looking at architecture search lib (will delete)
+* TPOT –– folder looking at architecture search lib *(will delete)*
 
-* ToxicComment –– Kaggle Toxic Comment competition (will move to Kaggle repo)
-
----
-
-Main repository for my AI study code; including Robotics and Quantum Informatics.
+* ToxicComment –– Kaggle Toxic Comment competition *(will move to Kaggle repo)*
