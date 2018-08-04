@@ -120,3 +120,6 @@ git push origin master --force
 <div class="alert alert-info">
 ...text...
 </div>
+
+#re-sync a fork with the original repo:
+https://stackoverflow.com/a/7244456
