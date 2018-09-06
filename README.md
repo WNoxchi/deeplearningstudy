@@ -13,9 +13,9 @@
 
 * FAML1 - Machine Learning I
 
-* FAI_old (2017) - [Practical Deep Learning I (2017)](http://course.fast.ai/)
+* FAI_old - [Deep Learning I (2017)](http://course.fast.ai/)
 
-* FAI02_old (2017) - [Cutting Edge Deep Learning II (2017)](http://course.fast.ai/part2.html)
+* FAI02_old - [Deep Learning II (2017)](http://course.fast.ai/part2.html)
 
 * 6.832 - [Underactuated Robotics](http://underactuated.csail.mit.edu/Spring2018/)
 
