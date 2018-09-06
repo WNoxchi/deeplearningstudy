@@ -121,5 +121,17 @@ git push origin master --force
 ...text...
 </div>
 
+
+## Jupyter Hub:
+
 #re-sync a fork with the original repo:
 https://stackoverflow.com/a/7244456
+
+Installation of Jupyterhub on remote server:
+https://github.com/jupyterhub/jupyterhub/wiki/Installation-of-Jupyterhub-on-remote-server
+
+JupyterHub Docs: Security Settings:
+https://jupyterhub.readthedocs.io/en/latest/getting-started/security-basics.html#enabling-ssl-encryption
+
+(YouTube) JupyterHub: Deploying Jupyter Notebooks
+https://www.youtube.com/watch?v=gSVvxOchT8Y
