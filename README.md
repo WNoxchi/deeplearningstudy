@@ -1,5 +1,5 @@
 # Kaukasos
- Artificial Intelligence / Robotics / Quantum Informatics
+ Artificial Intelligence / Robotics
  
  ---
 
@@ -23,16 +23,10 @@
 
 * pytorch –– PyTorch practice folder
 
-* research –– AI (Deep Learning) research work
+* research –– AI research work
 
 * quantum –– QML work & practice
 
 ## Others
-
-* Kaggle –– kaggle competition code *(unused; may make own repository instead)*
-
-* ML –– general machine learning *(will delete)*
-
-* TPOT –– folder looking at architecture search lib *(will delete)*
 
 * ToxicComment –– Kaggle Toxic Comment competition *(will move to Kaggle repo)*
