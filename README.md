@@ -30,3 +30,7 @@
 ## Others
 
 * ToxicComment –– Kaggle Toxic Comment competition *(will move to Kaggle repo)*
+
+* misc –– general work & temp items 
+
+* temp –– temporary folder
