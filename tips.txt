@@ -42,7 +42,10 @@ https://askubuntu.com/questions/223691/how-do-i-create-a-script-file-for-termina
 https://stackoverflow.com/questions/22656359/bash-shell-script-opening-multiple-terminals-and-executing-distinct-commands
 
 # Linux/UNIX: check drive usage via terminal:
-https://askubuntu.com/questions/432836/how-can-i-check-disk-space-used-in-a-partition-using-the-terminal-in-ubuntu-12-0/432842
+- https://askubuntu.com/questions/432836/how-can-i-check-disk-space-used-in-a-partition-using-the-terminal-in-ubuntu-12-0/432842
+- https://askubuntu.com/questions/73160/how-do-i-find-the-amount-of-free-space-on-my-hard-drive
+df -h --total
+# can also get pydf: sudo apt-get install pydf
 
 # Find where a Python module is imported from:
 https://stackoverflow.com/questions/7150998/where-is-module-being-imported-from
@@ -89,6 +92,9 @@ localhost:5913
 # rsync AWS
 http://www.anthonychambers.co.uk/blog/rsync-to-aws-ec2-using-.pem-key/9
 rsync -rave "ssh -i $SSHKEYPATH" REMOTENAME@REMOTEIP:PATHTOFILE $SAVETOPATH
+# rsync AWS Spot:
+$ rsync -rav ~/Downloads/kaggle.json "ssh -i ~/.ssh/id_rsa.pub" ubuntu@54.91.103.61:~/
+$ rsync -rav $FROMHERE $TOHERE
 
 # finding offline documentation for ReadTheDocs:
 http://natanyellin.com/2012/04/22/downloading-pdf-documentation-for-readthedocs-projects/
@@ -135,3 +141,27 @@ https://jupyterhub.readthedocs.io/en/latest/getting-started/security-basics.html
 
 (YouTube) JupyterHub: Deploying Jupyter Notebooks
 https://www.youtube.com/watch?v=gSVvxOchT8Y
+
+## dark jupyter notebook -- custom.css
+https://www.reddit.com/r/Python/comments/4cbxo7/dark_theme_for_jupyteripython_notebooks/
+
+## finding colors:
+# hex code inspector:
+https://www.color-hex.com
+# rgba insepctor:
+http://colorizer.org
+# macos: digital color meter
+
+## printing to console:
+# use fastprogress:
+https://github.com/fastai/fastprogress
+# if redirecting to file, manually print via: 
+print(f'\r{yourtext}', end='\r') ## https://stackoverflow.com/a/34325723
+
+## printing (ANSI) colors to console:
+https://stackoverflow.com/a/287944
+
+## git tips -- cancelling a commit
+https://sethrobertson.github.io/GitFixUm/fixup.html#remove_last
+git reset HEAD^
+or: git reset HEAD-2
