@@ -165,3 +165,23 @@ https://stackoverflow.com/a/287944
 https://sethrobertson.github.io/GitFixUm/fixup.html#remove_last
 git reset HEAD^
 or: git reset HEAD-2
+
+## transferring files from gcp storage to instance:
+gsutil cp -r gs://[bucket name] [directory in VM]
+# https://groups.google.com/d/msg/gce-discussion/JmW2nhQsMw0/ZWrUzO3nAgAJ
+
+## enable conda env integration w/ IPython kernels (Jupyter)
+conda install --channel=conda-forge nb_conda_kernels
+- https://github.com/jupyter/jupyter/issues/245#issuecomment-287080203
+
+## for-loops in bash shell
+# https://www.cyberciti.biz/faq/bash-for-loop/
+
+## instal .deb file from linux terminal:
+# https://unix.stackexchange.com/a/159114
+
+## docs on git stash
+# https://git-scm.com/docs/git-stash
+
+## gist on git upstream
+# https://gist.github.com/CristinaSolana/1885435
