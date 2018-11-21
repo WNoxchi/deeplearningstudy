@@ -185,3 +185,21 @@ conda install --channel=conda-forge nb_conda_kernels
 
 ## gist on git upstream
 # https://gist.github.com/CristinaSolana/1885435
+
+## git config
+# https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
+
+## git set global username and password (unencrypted)
+# https://stackoverflow.com/questions/11403407/git-asks-for-username-every-time-i-push
+git config --global user.name USERNAME	   <--- seems to work but not work
+git config --global user.password PASSWORD <--- seems to work but not work
+# and/or:
+git config credential.helper store
+# then enter 1 more time on push
+
+## see conda environments in jupyter
+# https://dev.widemeadows.de/2017/08/23/use-your-conda-environment-in-jupyter-notebooks/
+conda install nb_conda
+
+
+
