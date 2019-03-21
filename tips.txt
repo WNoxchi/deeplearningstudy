@@ -1,3 +1,18 @@
+# 20190319
+# find symbol in workspace: VSCode
+# type '#' in command pallete
+# see also: https://code.visualstudio.com/docs/editor/editingevolved
+
+# 20190316
+# installing node.js on MacOS via HomeBrew:
+https://www.dyclassroom.com/howto-mac/how-to-install-nodejs-and-npm-on-mac-using-homebrew
+# default usergroup on MacOS is 'staff':
+https://superuser.com/questions/590683/how-do-i-find-my-user-id-and-group-in-mac-os-x
+# ref:
+https://github.com/Homebrew/brew/issues/276#issuecomment-221692216
+
+========================================================================================
+
 # https://stackoverflow.com/questions/651018/opening-a-tar-gz-file-with-a-single-command
 
 tar xzf file.tar.gz
@@ -173,6 +188,10 @@ gsutil cp -r gs://[bucket name] [directory in VM]
 ## enable conda env integration w/ IPython kernels (Jupyter)
 conda install --channel=conda-forge nb_conda_kernels
 - https://github.com/jupyter/jupyter/issues/245#issuecomment-287080203
+# this may also be the way:
+- https://stackoverflow.com/a/48349338
+# perhaps also this:
+- https://github.com/jupyter/jupyter/issues/245#issuecomment-287080203
 
 ## for-loops in bash shell
 # https://www.cyberciti.biz/faq/bash-for-loop/
@@ -201,5 +220,19 @@ git config credential.helper store
 # https://dev.widemeadows.de/2017/08/23/use-your-conda-environment-in-jupyter-notebooks/
 conda install nb_conda
 
+## jupyter full-width cells:
+# https://www.reddit.com/r/IPython/comments/27zash/can_i_increase_notebook_cell_width_on_wide_screens/ci5zl6y
+# https://github.com/jupyter/notebook/issues/1909#issuecomment-266116532
 
+## release GPU memory after CUDA out of memory error:
+# delete learner / model
+gc.collect()
+# see: https://forums.fast.ai/t/unet-learer-cuda-error/32592/8?u=borz
 
+## start GCP instance:
+gcloud compute ssh --zone=$ZONE jupyter@fastai-instance -- -L 8080:localhost:8080
+# where $ZONE=us-east4-a
+
+## specifying vertical ruler in vscode:
+cmd-shift-p : settings --> 'editior.rulers' --> enter int/s in brackets, on right
+# https://stackoverflow.com/questions/29968499/vertical-rulers-in-visual-studio-code
